@@ -4,3 +4,11 @@
 #
 # В этой задаче вам нужно подсчитать ответ для данного входного файла.
 # Ссылка на входной файл: https://stepik.org/media/attachments/lesson/258917/input.txt
+
+
+data = open('input3.txt', 'r')
+a = []
+for line in data:
+    s = sum(map(int, line.split()))
+    a.append(s)
+print(*a)
