@@ -10,7 +10,7 @@
 #
 # Ссылка на csv-файл: https://stepik.org/media/attachments/lesson/258925/input.csv
 
-data = open('input10.csv', 'r', encoding='utf-8')
+data = open('data/input10.csv', 'r')
 
 a, n = [], []
 
