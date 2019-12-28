@@ -2,7 +2,7 @@
 #
 # В качестве ответа на задачу введите два числа через пробел.
 
-from urllib.request import urlopen, urlretrieve
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 

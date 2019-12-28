@@ -10,7 +10,7 @@
 #
 # В качестве ответа выведите количество внутренних ссылок, удовлетворяющих условию.
 
-from urllib.request import urlopen, urlretrieve
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 u = []

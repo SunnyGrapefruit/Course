@@ -2,7 +2,7 @@
 #
 # Обратите внимание, что если ссылка встречается в статье несколько раз, то учитывать ее нужно лишь однажды, т.е. необходимо найти количество различных страниц википедии, на которых есть ссылка как из первой, так и из второй статьи.
 
-from urllib.request import urlopen, urlretrieve
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 

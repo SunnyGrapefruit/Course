@@ -2,7 +2,7 @@
 #
 # Обратите внимание, что если ссылка встречается в статье несколько раз, то учитывать ее нужно лишь однажды.
 
-from urllib.request import urlopen, urlretrieve
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 

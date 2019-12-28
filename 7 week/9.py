@@ -4,7 +4,7 @@
 #
 # Например, если исходный текст страницы выглядел бы так:
 
-from urllib.request import urlopen, urlretrieve
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 s, d = [], []
