@@ -26,17 +26,22 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
+
+def tables(data):
+    rows = data.findAll("tr")
+    for row in rows:
+        csv_row = []
+        for cell in row.findAll(["td", "th"]):
+            csv_row.append(cell.get_text().strip())
+        print(','.join(map(str, csv_row)))
+
+
 resp = urlopen('https://stepik.org/media/attachments/lesson/258944/New-York.html')
 html = resp.read().decode('utf8')
 soup = BeautifulSoup(html, 'html.parser')
 
 
-table = soup.find_all('table', attrs={'class':'wikitable collapsible collapsed'})[0]
-
-rows = table.findAll("tr")
-
-for row in rows:
-    csv_row = []
-    for cell in row.findAll(["td", "th"]):
-        csv_row.append(cell.get_text().strip())
-    print(','.join(map(str, csv_row)))
+for i in range(0, 3):
+    table = soup.find_all('table', attrs={'class':'wikitable collapsible collapsed'})[i]
+    tables(table)
+    print("\n")
