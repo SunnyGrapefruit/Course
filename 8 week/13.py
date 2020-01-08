@@ -23,13 +23,11 @@ soup = BeautifulSoup(xml, 'xml')
 
 d = {}
 for way in soup.find_all('way'):
-    flag = False
     way_id = way['id']
     for tag in way('tag'):
         if tag['k'] == 'building':
             d[way_id] = []
             for nd in way('nd'):
-                ref = nd['ref']
                 d[way_id].append(nd['ref'])
 
 for i, j in d.items():
